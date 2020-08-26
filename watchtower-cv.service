@@ -1,0 +1,14 @@
+[Unit]
+Description=Watchtower CV
+After=network.target time-sync.target
+
+[Service]
+Type=notify
+ExecStart=/root/watchtower-cv/main.py
+WorkingDirectory=/root/watchtower-cv/
+Restart=always
+RestartSec=10s
+WatchdogSec=120
+
+[Install]
+WantedBy=multi-user.target

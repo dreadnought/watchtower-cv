@@ -1,0 +1,28 @@
+{
+  "video_url": "rtsp://user:password@192.168.0.1/live.sdp",
+  "slack_webhook_url": "https://hooks.slack.com/services/...",
+  "storage_bucket": {
+    "provider": "backblaze_b2",
+    "application_key_id": "",
+    "application_key": "",
+    "bucket_name": "bucket"
+  },
+  "roi": {
+    "y_start": 125,
+    "y_end": 980,
+    "x_start": 100,
+    "x_end": 1675
+  },
+  "model": {
+    "type": "darknet",
+    "classes_file": "models/coco.names",
+    "model_configuration_file": "models/yolov3.cfg",
+    "model_weights_file": "models/yolov3.weights",
+    "confidence_threshold": 0.4,
+    "nms_threshold": 0.4,
+    "input_width": 416,
+    "input_height": 416,
+    "cuda": true,
+    "ignored_classes": ["banana"]
+  }
+}
